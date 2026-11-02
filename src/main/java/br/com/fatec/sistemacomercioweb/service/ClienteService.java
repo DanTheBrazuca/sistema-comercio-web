@@ -14,7 +14,7 @@ public class ClienteService {
         this.repository = repository;
     }
     public List<Cliente> listar() {
-        return repository.findAll();
+        return repository.findAllByOrderByIdAsc();
     }
     public Cliente cadastrar(Cliente cliente) {
         return repository.save(cliente);
